@@ -1,8 +1,14 @@
 # parquet-rest
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+In today’s data-driven world, businesses need efficient ways to query and analyze large datasets. Parquet files have become a popular format for storing structured data due to their columnar storage format and compression capabilities. In this article, I’ll show you how to build a REST service that fetches Parquet files from S3, allows you to configure SQL queries through ConfigMaps, and exposes endpoints to query this data using the lightning-fast DuckDB engine.
 
-If you want to learn more about Quarkus, please visit its website: <https://quarkus.io/>.
+## Our service architecture consists of several key components:
+The service periodically fetches Parquet files from S3, loads them into DuckDB, and exposes REST endpoints to execute predefined SQL queries with parameters.
+
+* Quarkus Framework: A cloud-native Java framework optimized for GraalVM
+* Kotlin: A modern, concise JVM language
+* DuckDB: An in-process SQL OLAP database management system
+* JDBI: A SQL convenience library for Java
 
 ## Running the application in dev mode
 
