@@ -5,9 +5,9 @@ Content-Type: application/json
 {}
 
 ### filter-by-column
-POST http://localhost:8080/query/filter-by-column
+POST http://localhost:8080/query/findUsersByLastName
 Content-Type: application/json
 
 {
-  "arr_delay": -5
+  "lastName": "Mason"
 }
