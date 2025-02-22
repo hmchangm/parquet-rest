@@ -8,12 +8,12 @@ import jakarta.ws.rs.core.MediaType
 import jakarta.ws.rs.core.Response
 import org.jboss.resteasy.reactive.RestPath
 
-@Path("/parquet")
+@Path("/query")
 class ParquetResource(
     val parquetService: ParquetService,
 ) {
     @POST
-    @Path("/query/{queryName}")
+    @Path("/{queryName}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     fun queryWithParams(
@@ -42,7 +42,7 @@ class ParquetResource(
     @Produces(MediaType.TEXT_PLAIN)
     fun refreshParquetFile(): Response =
         try {
-            parquetService.fetchParquetFile()
+           // parquetService.fetchParquetFile()
             Response.ok("Parquet file refreshed successfully").build()
         } catch (e: Exception) {
             Response

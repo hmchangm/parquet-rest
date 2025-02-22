@@ -1,0 +1,13 @@
+### GET All
+POST http://localhost:8080/query/get-all
+Content-Type: application/json
+
+{}
+
+### filter-by-column
+POST http://localhost:8080/query/filter-by-column
+Content-Type: application/json
+
+{
+  "arr_delay": -5
+}
