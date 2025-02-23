@@ -7,9 +7,9 @@ import io.restassured.module.kotlin.extensions.When
 import org.junit.jupiter.api.Test
 
 @QuarkusTest
-class GreetingResourceTest {
+class QueryResourceTest {
     @Test
-    fun testHelloEndpoint() {
+    fun testQueryEndpoint() {
         Given {
             body("{}")
             header("Content-Type", "application/json")

@@ -8,7 +8,7 @@ import jakarta.ws.rs.core.MediaType
 import org.jboss.resteasy.reactive.RestPath
 
 @Path("/query")
-class ParquetResource(
+class QueryResource(
     val parquetService: ParquetService,
 ) {
     @POST
@@ -18,5 +18,5 @@ class ParquetResource(
     fun queryWithParams(
         @RestPath queryName: String,
         body: Map<String, Any>,
-    ) = parquetService.executeNamedQuery(queryName, body)
+    ) = parquetService.executeQuery(queryName, body)
 }
